@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-500: var(--primary-500);
+  --color-primary-700: var(--primary-700);
+  --color-secondary-500: var(--secondary-500);
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-700: var(--neutral-700);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+}
+
+/* Custom variant for dark: modifier support in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Default (Light) Variables */
+:root {
+  --background: #fafafa;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-border: #e4e4e7;
+  
+  --primary-50: #f5f3ff;
+  --primary-100: #ede9fe;
+  --primary-500: #6366f1;
+  --primary-700: #4338ca;
+  
+  --secondary-500: #06b6d4;
+  
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-700: #374151;
+  
+  --success: #16a34a;
+  --danger: #dc2626;
+  
+  /* Smooth scroll behavior */
+  scroll-behavior: smooth;
+}
+
+/* Dark Mode Variables */
+html.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card: #18181b;
+  --card-border: #27272a;
+  
+  --primary-50: #0f172a;
+  --primary-100: #1e1b4b;
+  --primary-500: #6366f1;
+  --primary-700: #818cf8;
+  
+  --secondary-500: #22d3ee;
+  
+  --neutral-50: #18181b;
+  --neutral-100: #27272a;
+  --neutral-700: #a1a1aa;
+  
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+/* Fallback auto-detect */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    --background: #09090b;
+    --foreground: #f4f4f5;
+    --card: #18181b;
+    --card-border: #27272a;
+    
+    --primary-50: #0f172a;
+    --primary-100: #1e1b4b;
+    --primary-500: #6366f1;
+    --primary-700: #818cf8;
+    
+    --secondary-500: #22d3ee;
+    
+    --neutral-50: #18181b;
+    --neutral-100: #27272a;
+    --neutral-700: #a1a1aa;
+    
+    --success: #22c55e;
+    --danger: #ef4444;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 9999px;
+}

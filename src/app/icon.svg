@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  {/* Left bracket (Indigo) */}
+  <path 
+    d="M 9 10 L 4 16 L 9 22" 
+    stroke="#6366f1" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+  
+  {/* Bold P (White/Theme foreground) */}
+  <path 
+    d="M 12 11 H 16.5 C 18 11 19 12 19 13.5 C 19 15 18 16 16.5 16 H 12 V 22 M 12 16 H 16" 
+    stroke="#6366f1" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+  
+  {/* Slash (Cyan) */}
+  <line 
+    x1="18.5" 
+    y1="22" 
+    x2="22.5" 
+    y2="10" 
+    stroke="#06b6d4" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+  />
+  
+  {/* Right bracket (Indigo) */}
+  <path 
+    d="M 23 10 L 28 16 L 23 22" 
+    stroke="#6366f1" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+</svg>

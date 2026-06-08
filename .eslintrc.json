@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals"],
+  "overrides": [
+    {
+      "files": ["*.config.js", "*.config.cjs"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-require-imports": "off",
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}
